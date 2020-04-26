@@ -1,0 +1,114 @@
+<!-- Don't steal code or u are gay lmao -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+</head>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  color: black;
+}
+
+#time {
+  font-size: 8rem;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 3rem;
+  color: white;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+  color: white;
+}
+
+.help{
+  position: fixed;
+  top: 730px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  color: white;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: .4s linear;
+}
+
+.help:hover{
+  transform: rotate(180deg);
+}
+
+.todo{
+  position: fixed;
+  top: 690px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  color: white;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: .4s linear;
+}
+
+.todo:hover{
+  transform: rotate(180deg);
+}
+
+@media (max-width: 700px) {
+  #time {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 1600px) {
+  .help {
+    top: 650px;
+  }
+}
+</style>
+</head>
+<body translate="no">
+<time id="time"></time>
+<h1>
+<span id="greeting"></span>
+<span spellcheck="false" id="name" contenteditable="true"></span>
+</h1>
+<h2>What is your focus today?</h2>
+<h2 spellcheck="false" id="focus" contenteditable="true"></h2>
+<a style="text-decoration: none;" href="help.html">
+<button class="help"><i class="fas fa-question-circle"></i></button>
+</a>
+</body>
+<script src="index.js"></script>
+</html>
