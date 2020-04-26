@@ -65,7 +65,7 @@ h2 {
   transform: rotate(180deg);
 }
 
-.todo{
+.news{
   position: fixed;
   top: 690px;
   right: 20px;
@@ -81,8 +81,73 @@ h2 {
   transition: .4s linear;
 }
 
-.todo:hover{
+.news:hover{
   transform: rotate(180deg);
+}
+
+.modal {
+  position: fixed;
+  font-family: 'Quicksand', sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: red;
+}
+
+.modal-body {
+  padding: 10px 15px;
+  color: black;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 @media (max-width: 700px) {
@@ -96,9 +161,15 @@ h2 {
     top: 650px;
   }
 }
+
+@media (max-width: 1600px) {
+  .news {
+    top: 600px;
+  }
+}
 </style>
-</head>
 <body translate="no">
+
 <time id="time"></time>
 <h1>
 <span id="greeting"></span>
@@ -106,9 +177,32 @@ h2 {
 </h1>
 <h2>What is your focus today?</h2>
 <h2 spellcheck="false" id="focus" contenteditable="true"></h2>
+<button data-modal-target="#modal" class="news"><i class="fas fa-bars"></i></button>
 <a style="text-decoration: none;" href="help.html">
 <button class="help"><i class="fas fa-question-circle"></i></button>
 </a>
+
+
+<div class="modal" id="modal">
+  <div class="modal-header">
+    <div class="title">News</div>
+    <button data-close-button class="close-button">&times;</button>
+  </div>
+  <div class="modal-body">
+   <strong>26 April 2020</strong><br>
+   <p>Today Sandstorm got a News modal. Here will all news and announcements come up!</p>
+
+   <!--<br>
+   <p>|</p>
+   <br>
+
+   <strong>26 April 2020</strong><br>
+   <p>Today Sandstorm got a News modal. Here will all news and announcements come up!</p>-->
+
+  
+  </div>
+</div>
+<div id="overlay"></div>
 </body>
 <script src="index.js"></script>
 </html>
