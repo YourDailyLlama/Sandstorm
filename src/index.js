@@ -39,15 +39,15 @@ function setBgGreet() {
 
   if (hour < 12) {
 
-    document.body.style.backgroundImage = "url('https://source.unsplash.com/featured/1920x1080/?morning')";
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/daily')";
     greeting.textContent = 'Good Morning, ';
   } else if (hour < 18) {
     
-    document.body.style.backgroundImage = "url('https://source.unsplash.com/featured/1920x1080/?nature')";
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/daily')";
     greeting.textContent = 'Good Afternoon, ';
   } else {
    
-    document.body.style.backgroundImage = "url('https://source.unsplash.com/featured/1920x1080/?evening')";
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/daily')";
     greeting.textContent = 'Good Evening, ';
     document.body.style.color = 'white';
   }
@@ -55,7 +55,7 @@ function setBgGreet() {
 
 function getName() {
   if (localStorage.getItem('name') === null) {
-    name.textContent = '[ Enter your name ]';
+    name.textContent = '[Enter your name]';
   } else {
     name.textContent = localStorage.getItem('name');
   }
@@ -76,7 +76,7 @@ function setName(e) {
 
 function getFocus() {
   if (localStorage.getItem('focus') === null) {
-    focus.textContent = '[ Enter what you want to focus on today ]';
+    focus.textContent = '[Enter what you want to focus on today]';
   } else {
     focus.textContent = localStorage.getItem('focus');
   }

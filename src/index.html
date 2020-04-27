@@ -24,6 +24,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   height: 100vh;
   color: black;
@@ -67,7 +69,7 @@ h2 {
 
 .news{
   position: fixed;
-  top: 690px;
+  top: 650px;
   right: 20px;
   width: 40px;
   height: 40px;
@@ -82,6 +84,26 @@ h2 {
 }
 
 .news:hover{
+  transform: rotate(180deg);
+}
+
+.donate{
+  position: fixed;
+  top: 690px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  color: white;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: .4s linear;
+}
+
+.donate:hover{
   transform: rotate(180deg);
 }
 
@@ -166,6 +188,9 @@ h2 {
 <h2>What is your focus today?</h2>
 <h2 spellcheck="false" id="focus" contenteditable="true"></h2>
 <button data-modal-target="#modal" class="news"><i class="fas fa-bars"></i></button>
+<a href="https://www.buymeacoffee.com/yourdailyllama" style="text-decoration: none;">
+<button class="donate"><i class="fas fa-donate"></i></button>
+</a>
 <a style="text-decoration: none;" href="help.html">
 <button class="help"><i class="fas fa-question-circle"></i></button>
 </a>
@@ -178,7 +203,7 @@ h2 {
   </div>
   <div class="modal-body">
    <strong>26 April 2020</strong><br>
-   <p>Today Sandstorm got a News modal. Here will all news and announcements come up!</p>
+   <p>Today Sandstorm got a news popup. Here will all news and announcements come up!</p>
 
    <!--<br>
    <p>|</p>
