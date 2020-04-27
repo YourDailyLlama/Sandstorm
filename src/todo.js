@@ -2,7 +2,7 @@
 
   var app = {
     init: function () {
-      // Load list
+      
       app.storage('get');
 
       // Add task
@@ -15,11 +15,11 @@
       }, false);
 
       document.querySelector('.app-list').addEventListener('click', function (e) {
-        // Remove task
+        
         if (e.target.classList.contains('remove-task')) {
           app.removeTask(e.target.parentNode);
 
-          // Complete Task
+          
         } else if (e.target.classList.contains('task')) {
           app.completeTask(e.target);
         }

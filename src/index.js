@@ -39,15 +39,15 @@ function setBgGreet() {
 
   if (hour < 12) {
 
-    document.body.style.backgroundImage = "url('https://source.unsplash.com/daily')";
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/featured/1920x1080/?morning')";
     greeting.textContent = 'Good Morning, ';
   } else if (hour < 18) {
     
-    document.body.style.backgroundImage = "url('https://source.unsplash.com/daily')";
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/featured/1920x1080/?nature')";
     greeting.textContent = 'Good Afternoon, ';
   } else {
    
-    document.body.style.backgroundImage = "url('https://source.unsplash.com/daily')";
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/featured/1920x1080/?evening')";
     greeting.textContent = 'Good Evening, ';
     document.body.style.color = 'white';
   }
